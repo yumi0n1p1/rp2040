@@ -1,27 +1,21 @@
 [package]
 edition = "2021"
-name = "rp2040-project-template"
+name = "rp2040"
 version = "0.1.0"
-license = "MIT OR Apache-2.0"
+license = "Apache-2.0"
 
 [dependencies]
-cortex-m = "0.7"
 cortex-m-rt = "0.7"
-embedded-hal = { version = "1.0.0" }
+embedded-hal = "1.0"
+embedded-hal-bus = "0.3"
 
-defmt = "0.3"
-defmt-rtt = "0.4"
-panic-probe = { version = "0.3", features = ["print-defmt"] }
+panic-halt = "1.0"
 
-# We're using a Pico by default on this template
-rp-pico = "0.9"
+pimoroni_badger2040 = "0.6"
+uc8151 = { git = "https://github.com/9names/uc8151-rs.git" }
 
-# but you can use any BSP. Uncomment this to use the pro_micro_rp2040 BSP instead
-# sparkfun-pro-micro-rp2040 = "0.8"
-
-# If you're not going to use a Board Support Package you'll need these:
-# rp2040-hal = { version="0.10", features=["rt", "critical-section-impl"] }
-# rp2040-boot2 = "0.3"
+usb-device = "0.3"
+usbd-serial = "0.2"
 
 # cargo build/run
 [profile.dev]
