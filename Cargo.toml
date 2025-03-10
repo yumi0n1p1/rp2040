@@ -17,6 +17,10 @@ uc8151 = { git = "https://github.com/9names/uc8151-rs.git" }
 usb-device = "0.3"
 usbd-serial = "0.2"
 
+embedded-graphics = "0.8"
+qrcodegen-no-heap = "1.8"
+u8g2-fonts = "0.6"
+
 # cargo build/run
 [profile.dev]
 codegen-units = 1
